@@ -1,4 +1,4 @@
-#include "libmx.h"
+#include "../inc/libmx.h"
 
 int mx_quicksort(char **arr, int left, int right) 
 {
@@ -6,6 +6,7 @@ int mx_quicksort(char **arr, int left, int right)
         return -1;
 
     int swap = 0;
+    int shelf = 0;
     int low = left, high = right;
     char *middle = arr[(low + high) / 2];
 
@@ -14,7 +15,7 @@ int mx_quicksort(char **arr, int left, int right)
         while (mx_strlen(arr[high]) > mx_strlen(middle) && high > left) high--;
         if (low < high) {
             if (mx_strlen(arr[low]) > mx_strlen(arr[high])) {
-                swap++;
+                shelf++;
                 char *tmp = arr[low];
                 arr[low] = arr[high];
                 arr[high] = tmp;
@@ -26,10 +27,14 @@ int mx_quicksort(char **arr, int left, int right)
 
     if (!mx_strcmp(arr[low], middle) && low < right)
          low++;
-    if (left != high)
-        swap += mx_quicksort(arr, left, high);
-    if (low != right)
-        swap += mx_quicksort(arr, low, right);
+    if (left != high) {
+        swap += shelf;
+        mx_quicksort(arr, left, high);
+    }
+    if (low != right) {
+        swap += shelf;
+        mx_quicksort(arr, low, right);
+    }
     return swap;
 }
 

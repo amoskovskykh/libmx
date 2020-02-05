@@ -1,7 +1,6 @@
-#include "libmx.h"
+#include "../inc/libmx.h"
 
-char *mx_strstr(const char *haystack, const char *needle) 
-{
+char *mx_strstr(const char *haystack, const char *needle) {
 	int m = mx_strlen(needle);
 	int n = mx_strlen(haystack) - m + 1;
 	
@@ -13,8 +12,7 @@ char *mx_strstr(const char *haystack, const char *needle)
 	return NULL;
 }
 
-// int main(void)
-// {
+// int main(void) {
 // 	char *s = "01234";
 // 	char *str = "123";
 // 	printf("%s",mx_strstr(s, str));

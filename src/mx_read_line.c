@@ -1,17 +1,17 @@
-#include "libmx.h"
+#include "../inc/libmx.h"
 
 typedef struct t_read {
     char *data;
     int fs;
 } t_read;
 
-int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) 
+int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd)
 {
 	static t_read p = {.data = NULL, .fs = -1000};
 	int count = 0;
 	int c;
 
-	if (buf_size < 1) 
+	if (buf_size < 1)
 		return -2;
 	if (p.fs != fd) {
 		free(p.data);

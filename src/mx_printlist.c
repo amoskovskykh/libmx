@@ -1,10 +1,10 @@
-#include "libmx.h"
+#include "../inc/libmx.h"
 
 void mx_printlist(t_list *p) {
     t_list *ptr = p;
-    for (int i = 0; ptr -> next != NULL; i++) {
-        //printf("%s ", ptr -> data);
-        ptr = ptr -> next;
+    for (; ptr->next != NULL; ptr = ptr->next) {
+        mx_printstr(ptr->data);
+        mx_printstr(" ");
     }
-    //printf("%s\n", ptr -> data);
+    mx_printstr(ptr -> data);
 }

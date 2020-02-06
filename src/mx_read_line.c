@@ -1,6 +1,6 @@
 #include "../inc/libmx.h"
 
-typedef struct t_read {
+typedef struct s_read {
     char *data;
     int fs;
 } t_read;

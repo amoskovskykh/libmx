@@ -34,7 +34,7 @@ char *mx_itoa(int number); //========
 void mx_foreach(int *arr, int size, void (*f)(int)); //========
 int mx_binary_search(char **arr, int size, const char *s, int *count); //========
 int mx_bubble_sort(char **arr, int size); //========
-int mx_quicksort(char **arr, int left, int right); ///////////////////////////////////////////////////
+int mx_quicksort(char **arr, int left, int right); ////////////////////
 
 //String pack
 int mx_strlen(const char *s); //========
@@ -44,7 +44,7 @@ void mx_strdel(char **str); //========
 void mx_del_strarr(char ***arr); //========
 int mx_get_char_index(const char *str, char c); //========
 char *mx_strdup(const char *s1); //========
-char *mx_strndup(const char *s1, size_t n); //////////////////////////////////////////////////
+char *mx_strndup(const char *s1, size_t n); //========
 char *mx_strcpy(char *dst, const char *src); //========
 char *mx_strncpy(char *dst, const char *src, int len); //========
 int mx_strcmp(const char *s1, const char *s2); //========
@@ -54,11 +54,11 @@ int mx_get_substr_index(const char *str, const char *sub); //========
 int mx_count_substr(const char *str, const char *sub); //========
 int mx_count_words(const char *str, char delimiter); //========
 char *mx_strnew(const int size); //========
-char *mx_strtrim(const char *str); ////////////////////////////////////
-char *mx_del_extra_spaces(const char *str); ////////////////////////////////////////////
+char *mx_strtrim(const char *str); //========
+char *mx_del_extra_spaces(const char *str); //========
 char **mx_strsplit(const char *s, char c); //========
 char *mx_strjoin(const char *s1, const char *s2); //========
-char *mx_file_to_str(const char *file); /////////////////////////////////////
+char *mx_file_to_str(const char *file); //========
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd); ///////////////////////////////////////
 char *mx_replace_substr(const char *str, const char *sub, const char *replace); //========
 
@@ -78,7 +78,7 @@ t_list *mx_create_node(void *data); //========
 void mx_push_front(t_list **list, void *data); //========
 void mx_push_back(t_list **list, void *data); //========
 void mx_pop_front(t_list **head); //========
-void mx_pop_back(t_list **head); ///////////////////////////////////////////
+void mx_pop_back(t_list **head); //========
 int mx_list_size(t_list *list); //========
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *)); //========
 

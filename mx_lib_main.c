@@ -31,21 +31,23 @@
 // }
 
 // int main(void) {
-//     char *name = "\f hello hell\t\n ";
-//     //char *name = "\f  My name...\n     is  \r \nNeo  \t\n ";
+//     // char *name = " hello hello\t\t\t\t\t\t bitch\t\n       ";
+//     char *name = "\f      \t";
 //     char *s = mx_del_extra_spaces(name);
-//     printf("\"%s\"\n", s);
+//     printf("%s\n", s);
 //     printf("%zu\n", malloc_size(s));
 //     //printf("%c", s[26]);
 //     return 0;
 // }
 
-// int main(){
-//     char *c = "t.txt";
-//     printf("%s\n", mx_file_to_str(c));
-//     printf("%zu\n", malloc_size(mx_file_to_str(c)));
-//     return 0;
-// }
+int main() {;
+    char *s = "test.txt";
+    char *str = mx_file_to_str(s);
+    printf("%s\n", str);
+    printf("%zu\n", malloc_size(str));
+    free(str);
+    return 0;
+}
 
 // int main () {
 //     char *s = "123456";
@@ -198,40 +200,49 @@
 //     return 0;
 // }
 
-#include <time.h>
-int main() {
-    srand(time(NULL));
-    // char *arr[4] = {"4444", "333", "22", "1"};  
-    // printf("Start\n"); //
-    // for(int i = 0; i < 4; i++)
-    //     printf("%s\n", arr[i]);
-    // printf("\n");
-    char **arr = (char **)malloc(sizeof(char *) * 100);
-    for (int i = 0; i < 100; ++i) {
-        arr[i] = mx_strnew(99);
-        for (int j = 0; j < rand() % 40 + 1; ++j) {
-            int r = rand() % 26;
-            for (int k = 0; k < j; ++k)
-                arr[i][k] = 65 + r;
-        }
-    }
+// #include <time.h>
+// int main() {
+//     srand(time(NULL));
+//     char *arr[6] = {"DMC", "Clint Eastwood", "Dr Brown", "Einstein", "Jessica", "Biff Tannen"};
+//     printf("Start\n"); //
+//     for(int i = 0; i < 6; i++)
+//         printf("%s\n", arr[i]);
+//     printf("\n");
+//     // char **arr = (char **)malloc(sizeof(char *) * 1000);
+//     // for (int i = 0; i < 1000; ++i) {
+//     //     arr[i] = mx_strnew(999);
+//     //     for (int j = 0; j < rand() % 300 + 1; ++j) {
+//     //         // int r = rand() % 26;
+//     //         for (int k = 0; k < j; ++k)
+//     //             arr[i][k] = 65 + rand() % 26;
+//     //     }
+//     // }
 
-    printf("Unorted array:\n");
-    for(int i = 0; i < 100; i++)
-        printf("%s\n", arr[i]);
-    printf("\n");
+//     // printf("Unorted array:\n");
+//     // for(int i = 0; i < 1000; i++)
+//     //     printf("%s\n", arr[i]);
+//     // printf("\n");
 
-    int j = mx_quicksort(arr, 0, 99);
-    printf("\n%d\n", j);
-    printf("Sorted array:\n");
-    for(int i = 0; i < 100; i++)
-        printf("%s\n", arr[i]);
+//     int j = mx_quicksort(arr, 0, 5);
+//     printf("\n%d\n", j);
+//     // printf("Sorted array:\n");
+//     // for(int i = 0; i < 1000; i++)
+//     //     printf("%s\n", arr[i]);
+    
+//     // for (int i = 0; i < 999; i++)
+//     //     if (mx_strlen(arr[i]) > mx_strlen(arr[i + 1])) {
+//     //         printf("\nMan, you really fucked up in %d line", i);
+//     //         exit(-1);
+//     //     }
 
-}
+//     // printf("\nEverything is O'k");
+
+
 // printf("interation\n"); //
-// for (int i = 0; i < 4; i++) //
+// for (int i = 0; i < 6; i++) //
 //     printf("%s \n", arr[i]); //
 // printf("\n"); ///s
+// }
 
 
 
@@ -374,9 +385,9 @@ int main() {
 // }
 
 // int main() {
-//     char *s = "hello kajdbhkjfdg;kfajb;ksg";
+//     char *s = "hello";
 //     //char *s = "";
-//     char *d = mx_strndup(s, 0);
+//     char *d = mx_strndup(s, -1);
 //     printf("%s\n", d);
 //     printf("%zu\n", malloc_size(d));
 //     return 0;
@@ -406,7 +417,7 @@ int main() {
 // }
 
 // int main(void) {
-//     char *name = "  hello\n\t\r  ";
+//     char *name = NULL;
 //     printf("%s\n", mx_strtrim(name));
 //     printf("%zu\n", malloc_size(mx_strtrim(name)));
 //     return 0;

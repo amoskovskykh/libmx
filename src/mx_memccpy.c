@@ -14,11 +14,3 @@ void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n) 
     }
 	return NULL;
 }
-
-// int main(void)
-// {
-//     char dst[7];
-//     char *src = "sdfs dfsdf";
-//     printf("%s\n", mx_memccpy(dst, src, ' ', 7));
-//     return 0;
-// }

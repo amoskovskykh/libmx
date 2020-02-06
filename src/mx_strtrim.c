@@ -9,9 +9,3 @@ char *mx_strtrim(const char *str) {
 	for (j = mx_strlen(str); (j > 0) && mx_isspace(str[j - 1]); j--);
 	return mx_strndup(&str[i], j - i);
 }
-
-// int main()
-// {
-// 	char *s = "";
-// 	printf("%s", mx_strtrim(s));
-// }

@@ -7,9 +7,3 @@ void *mx_memjoin(void *dst, void *src, size_t size, size_t len) {
         d[size + j] = s[j];
     return dst;
 }
-
-// int main() {
-//     char *s = "123";
-//     char *c = "++\0";
-//     printf("%s", mx_memjoin(s, c, 3, 3));
-// }

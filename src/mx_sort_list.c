@@ -17,23 +17,3 @@ t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *)){
             }
     return lst;
 }
-
-// int main(void) {
-//     char *s1 = "45";
-//     char *s3 = "2"; 
-//     char *s2 = "3";
-//     char *s4 = "77";
-//     t_list *p1 = mx_create_node(s2);
-//     mx_push_front(&p1, s1);
-//     mx_push_back(&p1, s3);
-//     mx_push_front(&p1, s4);
-//     mx_printlist(p1);
-//     //mx_pop_front(&p1);
-//     //mx_printlist(p1);
-//     //mx_pop_back(&p1);
-//     //mx_printlist(p1);
-//     mx_sort_list(p1, bmx_strcmp);
-//     mx_printlist(p1);
-//     return 0;
-// }
-

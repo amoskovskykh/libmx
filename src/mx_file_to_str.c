@@ -23,7 +23,3 @@ char *mx_file_to_str(const char *file) {
 	close(fd);
 	return str;
 }
-
-// int main(void) {
-// 	printf("%s\n", mx_file_to_str("tes.txt"));
-// }

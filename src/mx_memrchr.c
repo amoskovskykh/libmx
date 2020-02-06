@@ -8,9 +8,3 @@ void *mx_memrchr(const void *s, int c, size_t n) {
         return (void *) &str[i];
     return NULL;
 }
-
-// int main(void)
-// {
-//     //unsigned char src5[15]="13534567890";
-// 	printf("%s\n", (char *)mx_memrchr("Trinity", '0', 7));
-// }

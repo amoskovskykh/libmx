@@ -13,10 +13,3 @@ int mx_get_substr_index(const char *str, const char *sub) {
 			return i;
 	return -1;
 }
-
-// int main(void)
-// {
-// 	char *s = "01234";
-// 	char *str = "2";
-// 	printf("%d", mx_get_substr_index(s, str));
-// }

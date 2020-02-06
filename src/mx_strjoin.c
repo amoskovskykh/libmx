@@ -12,12 +12,3 @@ char *mx_strjoin(char const *s1, char const *s2) {
     }
     return p;
 }
-
-// int main(void)
-// {
-// 	char *str1 = "this", *str2 = "dodge ", *str3 = NULL;
-// 	printf("%s\n", mx_strjoin(str2, str1)); //returns "dodge this" 
-// 	printf("%s\n", mx_strjoin(str1, str3)); //returns "this" 
-// 	printf("%s\n", mx_strjoin(str3, str3)); //returns NULL
-// 	return 0;
-// }

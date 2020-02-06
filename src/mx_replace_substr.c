@@ -24,13 +24,3 @@ char *mx_replace_substr(const char *str, const char *sub, const char *replace) {
     mx_strcat(s, &str[j]);
     return s;
 }
-
-// int main(void)
-// {
-//     // char *s1 = "bacankoac";
-//     // char *s2 = "ac";
-//     // char *s3 = "++++++++";
-//     // printf("%s\n", );
-//     printf("%s\n", mx_replace_substr("Ururu turu", "ru", "ta"));
-//     return 0;
-// }

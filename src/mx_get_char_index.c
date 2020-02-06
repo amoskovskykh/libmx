@@ -7,11 +7,3 @@ int mx_get_char_index(const char *str, char c) {
             return i;
     return -1;
 }
-
-// int main()
-// {
-//     char *s = "Hello Neo";
-//     char c = ' ';
-//     printf("%d", mx_get_char_index(s, c));
-//     return 0;
-// }

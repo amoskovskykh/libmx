@@ -13,11 +13,3 @@ char *mx_itoa(int number) {
         s[i++] = ((m / v) % 10) + '0';
     return s;
 }
-
-// int main(){
-//     char *s = mx_itoa(-2332);
-//     printf("%s", s);
-//     free(s);
-//     system("leaks -q aaa");
-//     return 0;
-// }

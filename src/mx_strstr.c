@@ -11,9 +11,3 @@ char *mx_strstr(const char *haystack, const char *needle) {
 			return (char *) &haystack[i];
 	return NULL;
 }
-
-// int main(void) {
-// 	char *s = "01234";
-// 	char *str = "123";
-// 	printf("%s",mx_strstr(s, str));
-// }

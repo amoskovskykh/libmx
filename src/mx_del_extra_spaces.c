@@ -11,10 +11,3 @@ char *mx_del_extra_spaces(const char *str) {
 	free(r); 
 	return s;
 }
-
-// int main()
-// {
-// 	char *name = "\f My name... is \r Neo \t\n ";
-// 	printf("%s\n",mx_del_extra_spaces(name)); //returns "My name... is Neo"
-// 	return 0;
-// }

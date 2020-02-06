@@ -14,9 +14,3 @@ char *mx_nbr_to_hex(unsigned long nbr) {
 	}
     return res;
 }
-
-// int main(){
-//     char *r = mx_nbr_to_hex(10);
-//     printf("%s\n", r);
-//     return 0;
-// }

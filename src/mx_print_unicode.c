@@ -15,8 +15,3 @@ void mx_print_unicode(wchar_t c) {
     else if (c < 65536) prtu((int) c, 15, 224, 2);
     else prtu((int) c, 7, 240, 3);
 }
-
-// int main(void) {
-//     mx_print_unicode(345451);
-//     return 0;
-// }

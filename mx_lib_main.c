@@ -420,3 +420,68 @@ int main() {
 // 	return 0;
 
 // }
+
+// int main(void) {
+//     char *s1 = "Wake";
+//     char *s3 = "Neo"; 
+//     char *s2 = " up,";
+//     t_list *p1 = mx_create_node(s2);
+//     mx_push_front(&p1, s1);
+//     mx_push_back(&p1, s3);
+//     mx_printlist(p1);
+//     mx_pop_front(&p1);
+//     mx_printlist(p1);
+//     mx_pop_back(&p1);
+//     mx_printlist(p1);
+//     return 0;
+// }
+
+// void mx_pop_front(t_list **head)
+// {
+//     if (head == NULL || *head == NULL)
+//         return;
+//     t_list *first = *head;
+//     if(first->next == NULL)
+//     {
+//         free(*head);
+//         *head = NULL;
+//         return;
+//     }
+//     first = first->next;
+//     free(*head);
+//     *head = first;
+// }
+
+// int main(void) {
+//     char *s1 = "Wake";
+//     char *s3 = "Neo"; 
+//     char *s2 = " up,";
+//     t_list *p1 = mx_create_node(s2);
+//     mx_push_front(&p1, s1);
+//     mx_push_back(&p1, s3);
+//     mx_printlist(p1);
+//     mx_pop_front(&p1);
+//     mx_printlist(p1);
+//     return 0;
+// }
+
+// int main(void) {
+//     char *s1 = "45";
+//     char *s3 = "2"; 
+//     char *s2 = "3";
+//     char *s4 = "77";
+//     t_list *p1 = mx_create_node(s2);
+//     mx_push_front(&p1, s1);
+//     mx_push_back(&p1, s3);
+//     mx_push_front(&p1, s4);
+//     mx_printlist(p1);
+//     //mx_pop_front(&p1);
+//     //mx_printlist(p1);
+//     //mx_pop_back(&p1);
+//     //mx_printlist(p1);
+//     mx_sort_list(p1, bmx_strcmp);
+//     mx_printlist(p1);
+//     return 0;
+// }
+
+

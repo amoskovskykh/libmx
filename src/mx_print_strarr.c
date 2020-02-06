@@ -12,10 +12,3 @@ void mx_print_strarr(char **arr, const char *delim) {
     mx_printstr(arr[i]);
     mx_printchar('\n');
 }
-
-// int main(void) {
-//     char *arr[8] = {[0] = "Hello", "Neo,", "I'm", "glad", "to", "see", "you!", NULL};
-//     char *delim = " ";
-//     mx_print_strarr(arr, delim);
-//     return 0;
-// }

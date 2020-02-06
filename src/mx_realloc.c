@@ -16,12 +16,3 @@ void *mx_realloc(void *ptr, size_t size) {
 	free(ptr);
 	return dst;
 }
-
-// int main(void)
-// {
-//     char *srcv = (char *) malloc(sizeof(char) * 20);
-// 	srcv = "12345690";
-// 	printf ("old one: %s\n",srcv);
-// 	mx_realloc(srcv,10);
-// 	printf ("after realloc: %s\n",srcv);
-// }

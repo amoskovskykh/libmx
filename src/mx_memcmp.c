@@ -10,10 +10,3 @@ int mx_memcmp(const void *s1, const void *s2, size_t n) {
         i++;
     return d1[i] - d2[i];
 }
-
-// int main(void)
-// {
-//     unsigned char src3[15]="12345678907";
-// 	unsigned char dst3[15]="12305678904";
-//     printf("%d\n", mx_memcmp(src3, dst3, 10));
-// }

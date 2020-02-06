@@ -16,10 +16,3 @@ int mx_count_substr(const char *str, const char *sub) {
         }
     return count;
 }
-
-// int main(void)
-// {
-// 	char *s = "123";
-// 	char *str = "\0";
-// 	printf("%d", mx_count_substr(s, str));
-// }

@@ -18,11 +18,11 @@
 //     printf("%d\n", mx_count_substr(s, c));
 // }
 
-int main() {
-    //char *s = "  follow  *   the  white rabbit ";
-    char *s = "";
-    printf("%d\n", mx_count_words(s, ' '));
-}
+// int main() {
+//     //char *s = "  follow  *   the  white rabbit ";
+//     char *s = "";
+//     printf("%d\n", mx_count_words(s, ' '));
+// }
 
 // int main() {   
 //     t_list *s = mx_create_node("dojo");
@@ -198,15 +198,52 @@ int main() {
 //     return 0;
 // }
 
+#include <time.h>
+int main() {
+    srand(time(NULL));
+    // char *arr[4] = {"4444", "333", "22", "1"};  
+    // printf("Start\n"); //
+    // for(int i = 0; i < 4; i++)
+    //     printf("%s\n", arr[i]);
+    // printf("\n");
+    char **arr = (char **)malloc(sizeof(char *) * 100);
+    for (int i = 0; i < 100; ++i) {
+        arr[i] = mx_strnew(99);
+        for (int j = 0; j < rand() % 40 + 1; ++j) {
+            int r = rand() % 26;
+            for (int k = 0; k < j; ++k)
+                arr[i][k] = 65 + r;
+        }
+    }
+
+    printf("Unorted array:\n");
+    for(int i = 0; i < 100; i++)
+        printf("%s\n", arr[i]);
+    printf("\n");
+
+    int j = mx_quicksort(arr, 0, 99);
+    printf("\n%d\n", j);
+    printf("Sorted array:\n");
+    for(int i = 0; i < 100; i++)
+        printf("%s\n", arr[i]);
+
+}
+// printf("interation\n"); //
+// for (int i = 0; i < 4; i++) //
+//     printf("%s \n", arr[i]); //
+// printf("\n"); ///s
+
+
+
 // int main() {
 //     //char *s[] = {"Michelangelo", "Donatello", "Leonardo", "Raphael"};
-//     char *s[] = {"666666", "333", "999999999", "1", "88888888", "4444", "55555", "7777777", "22"};
-//     for (int i = 0; i <= 8; i++) {
+//     char *s[] = {"Michelangelo", "Donatello", "Leonardo", "Raphael"};
+//     for (int i = 0; i <= 3; i++) {
 //         printf("%s ", s[i]);
 //     }
 //     printf("%c", '\n');
-//     printf("%d\n", mx_quicksort(s, 0, 8));
-//     for (int i = 0; i <= 8; i++) {
+//     printf("%d\n", mx_quicksort(s, 0, 3));
+//     for (int i = 0; i <= 3; i++) {
 //         printf("%s ", s[i]);
 //     }
 //     return 0;

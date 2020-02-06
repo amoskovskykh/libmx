@@ -14,6 +14,11 @@ typedef struct s_list {
     void *data;
     struct s_list *next;
 } t_list;
+
+enum {
+    LOW,
+    HIGH,
+};
  
 //Utils pack
 void mx_printchar(char c); //========

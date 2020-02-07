@@ -1,5 +1,5 @@
-#ifndef HEADER
-#define HEADER
+#ifndef LIBMX_H
+#define LIBMX_H
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -15,7 +15,7 @@ typedef struct s_list {
     struct s_list *next;
 } t_list;
 
-enum {
+enum e_quick {
     LOW,
     HIGH,
 };
@@ -34,7 +34,7 @@ char *mx_itoa(int number); //========
 void mx_foreach(int *arr, int size, void (*f)(int)); //========
 int mx_binary_search(char **arr, int size, const char *s, int *count); //========
 int mx_bubble_sort(char **arr, int size); //========
-int mx_quicksort(char **arr, int left, int right); ////////////////////
+int mx_quicksort(char **arr, int left, int right); //========
 
 //String pack
 int mx_strlen(const char *s); //========

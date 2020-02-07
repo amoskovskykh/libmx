@@ -13,6 +13,10 @@
 // }
 
 // int main() {
+//     printf("%lf\n", mx_pow(5, 4));
+// }
+
+// int main() {
 //     char *s = "yoyoyoyo";
 //     char *c = NULL;
 //     printf("%d\n", mx_count_substr(s, c));
@@ -40,14 +44,14 @@
 //     return 0;
 // }
 
-int main() {;
-    char *s = "test.txt";
-    char *str = mx_file_to_str(s);
-    printf("%s\n", str);
-    printf("%zu\n", malloc_size(str));
-    free(str);
-    return 0;
-}
+// int main() {;
+//     char *s = "test.txt";
+//     char *str = mx_file_to_str(s);
+//     printf("%s\n", str);
+//     printf("%zu\n", malloc_size(str));
+//     free(str);
+//     return 0;
+// }
 
 // int main () {
 //     char *s = "123456";

@@ -21,6 +21,7 @@ int mx_quicksort(char **arr, int left, int right) {
     if (low == left) low++;
     if (low < right)
         swap_count += mx_quicksort(arr, low, right);
+        
     return swap_count;
     return 0;
 }

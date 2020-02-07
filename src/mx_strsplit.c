@@ -1,12 +1,15 @@
 #include "../inc/libmx.h"
 
 char **mx_strsplit(const char *s, char c) {
-   if (s == NULL) 
-      return NULL;
-   int n = mx_count_words(s, c);
-   char **arr = (char ** ) malloc((n + 1) * sizeof(char *));
+   int n;
+   char **arr;
    int m = 0;
    int j;
+
+   if (s == NULL) 
+      return NULL;
+   n = mx_count_words(s, c);
+   arr = (char ** ) malloc((n + 1) * sizeof(char *));
    
    for (int i = 0; s[i]; i++)
       if (s[i] != c) {

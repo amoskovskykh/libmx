@@ -1,11 +1,12 @@
 #include "../inc/libmx.h"
 
 int mx_count_words(const char *str, char delimiter) {
+	int rez = 0;
+	
 	if (str == NULL) 
 		return -1;
 	if (delimiter == '\0') 
 		return 1;
-	int rez = 0;
 	
 	for (int i = 0; str[i]; i++)
 		if (str[i] != delimiter)

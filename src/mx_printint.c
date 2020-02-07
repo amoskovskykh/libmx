@@ -8,7 +8,7 @@ void mx_printint(int n) {
         mx_printchar('-');
         m = -n;
     }
-    for (v = 1; m / v >= 10; v *= 10);
+    for (v = 1; m / v >= 10; v *= 10); //finding highest place value
     for (; v > 0; v /= 10)
         mx_printchar((m / v) % 10 + '0');
 }

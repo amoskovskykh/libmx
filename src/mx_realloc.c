@@ -12,7 +12,7 @@ void *mx_realloc(void *ptr, size_t size) {
 	void *dst = malloc(len);
 	if (!dst)
 		return dst;
-	mx_memmove(dst, ptr, (len < malloc_size(ptr)) ? len : malloc_size(ptr)); // malloc_size shows how much memory was actually allocated
+	mx_memmove(dst, ptr, (len < malloc_size(ptr)) ? len : malloc_size(ptr));
 	free(ptr);
 	return dst;
 }

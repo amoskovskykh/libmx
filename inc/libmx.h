@@ -95,6 +95,7 @@ void *mx_memjoin(void *dst, void *src, size_t size, size_t len);
 int mx_atoi(char *str);
 _Bool mx_isdigit(char c);
 void mx_printerr(const char *s);
+char *mx_strncat(char *restrict s1, const char *restrict s2, int n);
 
 
 #endif 

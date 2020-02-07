@@ -78,6 +78,7 @@ SRC	= 	mx_printchar.c \
 		mx_atoi.c \
 		mx_isdigit.c \
 		mx_printerr.c \
+		mx_strncat.c \
 
 
 SRCS	=	$(addprefix $(SRCD)/, $(SRCC))

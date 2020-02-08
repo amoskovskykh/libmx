@@ -8,8 +8,8 @@
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 	if (buf_size < 1 || fd < 0)
 		return -2;
-	if (*lineptr)
-		free(*lineptr);
+		
+	*lineptr = NULL;
 
 	static char *str = NULL;
 	int count = 0;
@@ -23,25 +23,34 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 		c = mx_get_char_index(str, delim);
 		if (c != -1) {
 			count += c;
+			*lineptr = (char *) mx_realloc(*lineptr, (size_t) count);
 			mx_strncat(*lineptr, str, c);
 			str = mx_strncpy(mx_strnew(n - c - 1), str + c + 1, n - c - 1); ////
 			return count;
 		}
 		count += n;
+		*lineptr = (char *) mx_realloc(*lineptr, (size_t) count);
 		mx_strncat(*lineptr, str, n);
+		free(str);
+		str = NULL;
 	}
 
 	for (size = read(fd, buf, buf_size); size; size = read(fd, buf, buf_size)) {
 		c = mx_get_char_index(buf, delim);
 		if (c != -1) {
 			count += c;
+			*lineptr = (char *) mx_realloc(*lineptr, (size_t) count);
 			mx_strncat(*lineptr, buf, c);
 			str = mx_strncpy(mx_strnew(size - c - 1), buf + c + 1, size - c - 1);
 			return count;
 		}
 		count += size;
+		*lineptr = (char *) mx_realloc(*lineptr, (size_t) count);
 		mx_strncat(*lineptr, buf, size);
 	}
+
+	if (size == 0 && count == 0)
+		return -1;
 	return count;
 }
 
@@ -55,12 +64,6 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 // 	if (p.fd_stat != fd) {
 // 		free(p.data);
 // 		p.data = NULL;
-
-
-
-
-
-
 // 	}
 // 	p.fd_stat = fd;
 

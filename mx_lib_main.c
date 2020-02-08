@@ -266,30 +266,19 @@
 
 int main(void) {
 	int fd = open("test.txt", O_RDONLY);
-	char *str = mx_strnew(400);
+	char *str;
 	
 	printf("%d\n", mx_read_line(&str, 20, 'f', fd)); //res = 25, str = "The hotel was abandoned a"
 	printf("%s\n", str);
 
-	free(str);
-	str = mx_strnew(400);
-
 	printf("%d\n", mx_read_line(&str, 35, 't', fd)); //res = 0, str = ""
 	printf("%s\n", str);
 
-	free(str);
-	str = mx_strnew(400);
-
 	printf("%d\n", mx_read_line(&str, 4, '.', fd)); //res = 163 str = "The hotel was abandoned a... (to the end)"
 	printf("%s\n", str);
-	free(str);
+    free(str);
 
-	// str = mx_strnew(400);
-
-	// printf("%d\n", mx_read_line(&str, 4, '.', fd)); //res = 25, str = "The hotel was abandoned a"
-	// printf("%s\n", str);
-	// free(str);
- 	//system("leaks -q aaa");
+ 	system("leaks -q aaa");
 	return 0;
 }
 

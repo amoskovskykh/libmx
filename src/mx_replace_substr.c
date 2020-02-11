@@ -1,8 +1,3 @@
-/*----------------------------------------------------------------------
- * Function replaces all occurrences of                             
- * const сhar *sub in const char *str with const char *replace.        
- *--------------------------------------------------------------------*/
-
 #include "../inc/libmx.h"
 
 char *mx_replace_substr(const char *str, const char *sub, const char *replace) {

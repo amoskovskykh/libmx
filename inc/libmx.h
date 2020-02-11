@@ -19,6 +19,12 @@ enum e_quick {
     LOW,
     HIGH,
 };
+
+typedef struct s_read {
+	size_t buf_size;
+	char delim;
+	const int fd;
+} t_read;
  
 //Utils pack
 void mx_printchar(char c); //========

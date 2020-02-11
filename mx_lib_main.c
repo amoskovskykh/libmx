@@ -265,8 +265,8 @@
 // }
 
 int main(void) {
-	int fd = open("test.txt", O_RDONLY);
-	char *str;
+	int fd = open("test1.txt", O_RDONLY);
+	char *str = NULL;
 	
 	printf("%d\n", mx_read_line(&str, 20, 'f', fd)); //res = 25, str = "The hotel was abandoned a"
 	printf("%s\n", str);
@@ -275,7 +275,7 @@ int main(void) {
 	printf("%s\n", str);
 
 	printf("%d\n", mx_read_line(&str, 4, '.', fd)); //res = 163 str = "The hotel was abandoned a... (to the end)"
-	printf("%s\n", str);
+	printf("%s\n\n", str);
     free(str);
 
  	system("leaks -q aaa");

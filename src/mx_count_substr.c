@@ -5,9 +5,9 @@ int mx_count_substr(const char *str, const char *sub) {
     int m;
     int n;
 
-    if (str == NULL || sub == NULL)
+    if (!str || !sub)
         return -1;
-    if (*sub)
+    if (!*sub)
         return 0;
     n = mx_strlen(sub);
     m = mx_strlen(str) - n + 1;

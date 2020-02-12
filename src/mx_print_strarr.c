@@ -5,7 +5,7 @@ void mx_print_strarr(char **arr, const char *delim) {
 
     if (arr == NULL || *arr == NULL|| delim == NULL) 
         return;
-    for (i = 0; arr[i + 1] != NULL; i++) {
+    for (i = 0; arr[i + 1]; i++) {
         mx_printstr(arr[i]);
         mx_printstr(delim);
     }

@@ -17,14 +17,23 @@
 // }
 
 // int main() {
-//     char *s = "yoyoyoyo";
-//     char *c = NULL;
-//     printf("%d\n", mx_count_substr(s, c));
+// 	printf("%d", mx_atoi("-123"));
+// }
+
+// int main(void) {
+// 	int count = 0;
+// 	char *arr[4] = {"he", "she", "it", NULL};
+// 	printf("arr[%d] == %s", mx_binary_search(arr, 3, "she", &count), arr[mx_binary_search(arr, 3, "she", &count)]);
 // }
 
 // int main() {
-//     //char *s = "  follow  *   the  white rabbit ";
-//     char *s = "";
+//     char *s = "yo, yo, yo Neo";
+//     printf("%d\n", mx_count_substr(s, "yo"));
+// }
+
+// int main() {
+//     char *s = "follow*   the  white rabbit";
+//     // char *s = " ";
 //     printf("%d\n", mx_count_words(s, ' '));
 // }
 
@@ -65,20 +74,20 @@
 // }
 
 // int main() {
-//     int s = 0;
+//     int s = 12345;
 //     printf("%s\n", mx_itoa(s));
 //     return 0;
 // }
 
 // int main() {
 //     char *a = "papa";
-//     char *b = "mama";
-//     char *c = "ss";
+//     // char *b = "mama";
+//     // char *c = "ss";
 //     t_list *head = mx_create_node(a);
-//     t_list *s1 = mx_create_node(b);
-//     head->next = s1;
-//     t_list *s2 = mx_create_node(c);
-//     s1->next = s2;
+//     // t_list *s1 = mx_create_node(b);
+//     // head->next = s1;
+//     // t_list *s2 = mx_create_node(c);
+//     // s1->next = s2;
     
 //     int k = mx_list_size(head);
 //     printf("%d", k);
@@ -115,7 +124,7 @@
 
 // int main () {
 //     char s1[] = "7R8FeGZJEH9    WEy4i9BcMw1BWsZk";
-//     char s2[] = "";
+//     char s2[] = " WE";
 //     int j = 70;
 //     int i = 2;
 //     printf("%s\n", mx_memmem(s1, j, s2, i));
@@ -265,9 +274,9 @@
 // }
 
 int main(void) {
-	int fd = open("test1.txt", O_RDONLY);
+	int fd = open("test.txt", O_RDONLY);
 	char *str = NULL;
-	
+    
 	printf("%d\n", mx_read_line(&str, 20, 'f', fd)); //res = 25, str = "The hotel was abandoned a"
 	printf("%s\n", str);
 
@@ -278,7 +287,7 @@ int main(void) {
 	printf("%s\n\n", str);
     free(str);
 
- 	system("leaks -q aaa");
+ 	// system("leaks -q aaa");
 	return 0;
 }
 

@@ -3,7 +3,7 @@
 char **mx_strsplit(const char *s, char c) {
    if (s) {
       int n = mx_count_words(s, c);
-      char **arr = (char ** ) malloc((n + 1) * sizeof(char *));
+      char **arr = (char **)malloc((n + 1) * sizeof(char *));
       int m = 0;
       int j;
       

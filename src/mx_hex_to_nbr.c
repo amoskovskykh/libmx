@@ -1,6 +1,6 @@
 unsigned long mx_hex_to_nbr(const char *hex) {
     unsigned long res = 0;
-    
+
     for (int i = 0; hex[i]; i++)
         if (hex[i] > 47 && hex[i] < 58)
             res = res * 16 + (hex[i] - '0');

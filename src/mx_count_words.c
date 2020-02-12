@@ -3,9 +3,9 @@
 int mx_count_words(const char *str, char delimiter) {
     int rez = 0;
 
-    if (str == NULL)
+    if (!str)
         return -1;
-    if (delimiter)
+    if (!delimiter)
         return 1;
     for (int i = 0; str[i]; i++)
         if (str[i] != delimiter)

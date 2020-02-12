@@ -3,7 +3,7 @@
 void mx_printlist(t_list *p) {
     t_list *ptr = p;
 
-    if (p)
+    if (!p)
         return;
     for (; ptr->next != NULL; ptr = ptr->next) {
         mx_printstr(ptr->data);

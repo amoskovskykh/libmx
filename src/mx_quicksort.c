@@ -1,5 +1,11 @@
 #include "../inc/libmx.h"
 
+static void swap(char **arr1, char **arr2) {
+    char *temp = *arr1;
+    *arr1 = *arr2;
+    *arr2 = temp;
+}
+
 static int *partition(char **arr, int left, int right, int *swap_count) {
     int low = left;
     int high = right;
@@ -20,19 +26,13 @@ static int *partition(char **arr, int left, int right, int *swap_count) {
     return (int[]) {low, high};
 }
 
-static void swap(char **arr1, char **arr2) {
-    char *temp = *arr1;
-    *arr1 = *arr2;
-    *arr2 = temp;
-}
-
 int mx_quicksort(char **arr, int left, int right) {
     int swap_count = 0;
     int low = left;
     int high = right;
     int *s;
 
-    if (arr && *arr)
+    if (!arr && !*arr)
         return -1;
 
     s = partition(arr, low, high, &swap_count);

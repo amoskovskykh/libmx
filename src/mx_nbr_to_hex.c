@@ -7,7 +7,7 @@ char *mx_nbr_to_hex(unsigned long nbr) {
 
     for (i = 0; temp / 16; i++)
         temp /= 16;
-    res = (char *) malloc(i * sizeof(char));
+    res = malloc(i * sizeof(char));
     for (; i >= 0 ; i--) {
 		temp = nbr % 16;
         res[i] = (temp < 10) ? temp + 48 : temp + 87;

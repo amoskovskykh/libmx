@@ -7,12 +7,12 @@ int mx_count_substr(const char *str, const char *sub) {
 
     if (str == NULL || sub == NULL)
         return -1;
-    if (sub[0] == '\0')
+    if (*sub)
         return 0;
-    m = mx_strlen(str) - mx_strlen(sub) + 1; // upper bounded searching range
     n = mx_strlen(sub);
+    m = mx_strlen(str) - n + 1;
 
-    for (int i = 0; i < m; i++)        
+    for (int i = 0; i < m; i++)
         if (mx_strncmp(&str[i], sub, n) == 0) {
             count++;
             i += n - 1;

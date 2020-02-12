@@ -1,37 +1,5 @@
 #include "../inc/libmx.h"
 
-static void swap(char **arr1, char **arr2);
-static int *partition(char **arr, int left, int right, int *swap_count);
-
-int mx_quicksort(char **arr, int left, int right) {
-    int swap_count = 0;
-    int low = left;
-    int high = right;
-    int *s;
-
-    if (arr == NULL || *arr == NULL)
-        return -1;
-
-    s = partition(arr, low, high, &swap_count);
-    low = s[LOW];
-    high = s[HIGH];
-
-    if (left < high)
-        swap_count += mx_quicksort(arr, left, high);
-    if (low == left) low++;
-    if (low < right)
-        swap_count += mx_quicksort(arr, low, right);
-        
-    return swap_count;
-    return 0;
-}
-
-static void swap(char **arr1, char **arr2) {
-    char *temp = *arr1;
-    *arr1 = *arr2;
-    *arr2 = temp;
-}
-
 static int *partition(char **arr, int left, int right, int *swap_count) {
     int low = left;
     int high = right;
@@ -52,9 +20,36 @@ static int *partition(char **arr, int left, int right, int *swap_count) {
     return (int[]) {low, high};
 }
 
-// int mx_quicksort(char **arr, int left, int right) 
-// {
-//     if (arr == NULL && *arr == NULL)
+static void swap(char **arr1, char **arr2) {
+    char *temp = *arr1;
+    *arr1 = *arr2;
+    *arr2 = temp;
+}
+
+int mx_quicksort(char **arr, int left, int right) {
+    int swap_count = 0;
+    int low = left;
+    int high = right;
+    int *s;
+
+    if (arr && *arr)
+        return -1;
+
+    s = partition(arr, low, high, &swap_count);
+    low = s[LOW];
+    high = s[HIGH];
+
+    if (left < high)
+        swap_count += mx_quicksort(arr, left, high);
+    if (low == left) low++;
+    if (low < right)
+        swap_count += mx_quicksort(arr, low, right);
+
+    return swap_count;
+}
+
+// int mx_quicksort(char **arr, int left, int right) {
+//     if (arr && *arr)
 //         return -1;
 
 //     int swap = 0;

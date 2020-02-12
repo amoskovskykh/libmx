@@ -3,7 +3,7 @@
 static void prtu(int c, int a, int b, int i) {
     for (int j = i; j >= 0; j--) {
         char s = 0;
-        s = j == i ? (char) ((c >> (6 * j)) & a) | b : 
+        s = j == i ? (char) ((c >> (6 * j)) & a) | b :
             (char) ((c >> (6 * j)) & 63) | 128;
         write(1, &s, 1);
     }

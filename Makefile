@@ -1,13 +1,13 @@
-NAME	=	libmx.a
+NAME = libmx.a
 
-CFLG	=	-std=c11 $(addprefix -W, all extra error pedantic) -g
+CFLG = -std=c11 $(addprefix -W, all extra error pedantic)
 
-SRCD	=	src
-INCD	=	inc
-OBJD	=	obj
+SRCD = src
+INCD = inc
+OBJD = obj
 
-INC		=	libmx.h
-INCS	=	$(addprefix $(INCD)/, $(INC))
+INC = libmx.h
+INCS = $(addprefix $(INCD)/, $(INC))
 
 SRC	= 	mx_printchar.c \
 		mx_print_unicode.c \
@@ -81,8 +81,8 @@ SRC	= 	mx_printchar.c \
 		mx_strncat.c \
 
 
-SRCS	=	$(addprefix $(SRCD)/, $(SRCC))
-OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))
+SRCS = $(addprefix $(SRCD)/, $(SRCC))
+OBJS = $(addprefix $(OBJD)/, $(SRC:%.c=%.o))
 
 all: install
 	
@@ -96,7 +96,7 @@ $(OBJD)/%.o: $(SRCD)/%.c $(INCS)
 	@clang $(CFLG) -c $< -o $@ -I$(INCD)
 	@printf "\r\33[2K$(NAME)\t   \033[33;1mcompile \033[0m$(<:$(SRCD)/%.c=%) "
 
-$(OBJS): | $(OBJD)
+$(OBJS): $(OBJD)
 
 $(OBJD):
 	@mkdir -p $@

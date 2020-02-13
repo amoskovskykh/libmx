@@ -6,7 +6,7 @@ char **mx_strsplit(const char *s, char c) {
       char **arr = (char **)malloc((n + 1) * sizeof(char *));
       int m = 0;
       int j;
-      
+   
       for (int i = 0; s[i]; i++)
          if (s[i] != c) {
             for (j = 1; (s[i + j] != c) && s[i + j]; j++);
